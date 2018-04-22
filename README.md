@@ -1,8 +1,17 @@
-Rajwani Family web site version 1. 
+Rajwani Family web site version 2. 
 
-To try it out, just open the index.html in any browser.
+This website is about the Rajwani family. Includes personal profiles, vacations and a contact us form. 
 
-1. Only uses html and css.
-2. Site is reponsive and adjusts for the smaller screens (phone, tablet)
+This version is more advance than [version 1](https://github.com/RuheeRajwani/FamilySite-1 "version 1.")
 
-Verions 2 and 3 are more advance.
+Changes from version 1:
+1. Nodejs for webserver.
+2. Ejs for templating.
+3. Code size is signifantly reduced as header/footer/menu is moved to partials.
+4. Easy to change as header/footer/menu is at one place.
+
+To run do the following:
+1. npm install
+2. node server.js
+
+
