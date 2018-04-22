@@ -59,31 +59,10 @@
 
 <body>
 
-	<% include ../partials/header %>
-		<div id="content">
-			<div class="topnav" id="myTopnav">
-				<a href="index.html">Home</a>
-				<a href="asif.html">Asif</a>
-				<a href="laila.html">Laila</a>
-				<a href="ahil.html">Ahil</a>
-				<a href="ruhee.html">Ruhee</a>
-				<a href="grandparents.html">Grandparents</a>
-				<a href="vacation.html">Vacation</a>
-				<a class="selected" id="contactus" href="contactUs.html">Contact Us</a>
 
-
-				<a href="javascript:void(0);" style="font-size: 15px;" class="icon" onclick="myFunction()">&#9776;</a>
-			</div>
-			<script>
-				function myFunction() {
-					var x = document.getElementById("myTopnav");
-					if (x.className === "topnav") {
-						x.className += " responsive";
-					} else {
-						x.className = "topnav";
-					}
-				}
-			</script>
+	<div id="content">
+			<% include ../partials/menu %>
+			
 			<h1>Contact Us</h1>
 			<div id="form">
 				<form action="mailto:ruhee.rajwani@gmail.com" method="POST" enctype="multipart/form-data" name="EmailTestForm">

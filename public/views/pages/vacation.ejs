@@ -2,25 +2,8 @@
 
 	<% include ../partials/header %>
 	<div id="content">
-		<div class="topnav" id="myTopnav">
-			<a href="index.html">Home</a> <a href="asif.html">Asif</a> <a
-				href="laila.html">Laila</a> <a href="ahil.html">Ahil</a> <a
-				href="ruhee.html">Ruhee</a> <a href="grandparents.html">Grandparents</a>
-			<a class="selected" href="vacation.html">Vacation</a> <a
-				id="contactus" href="contactUs.html">Contact Us</a> <a
-				href="javascript:void(0);" style="font-size: 15px;" class="icon"
-				onclick="myFunction()">&#9776;</a>
-		</div>
-		<script>
-			function myFunction() {
-				var x = document.getElementById("myTopnav");
-				if (x.className === "topnav") {
-					x.className += " responsive";
-				} else {
-					x.className = "topnav";
-				}
-			}
-		</script>
+			<% include ../partials/menu %>
+			
 		<h1>Vacations</h1>
 		<p>The Rajwani's try to go on at least one family trip year. Some
 			years it's simple and small and some years we go all out. Our

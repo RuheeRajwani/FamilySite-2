@@ -1,30 +1,9 @@
 <% include ../partials/head %>
 
 	<% include ../partials/header %>
-		<div id="content">
-			<div class="topnav" id="myTopnav">
-				<a class="selected" href="index.html">Home</a>
-				<a href="asif.html">Asif</a>
-				<a href="laila.html">Laila</a>
-				<a href="ahil.html">Ahil</a>
-				<a href="ruhee.html">Ruhee</a>
-				<a href="grandparents.html">Grandparents</a>
-				<a href="vacation.html">Vacation</a>
-				<a id="contactus" href="contactUs.html">Contact Us</a>
-
-
-				<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-			</div>
-			<script>
-				function myFunction() {
-					var x = document.getElementById("myTopnav");
-					if (x.className === "topnav") {
-						x.className += " responsive";
-					} else {
-						x.className = "topnav";
-					}
-				}
-			</script>
+	<div id="content">
+			<% include ../partials/menu %>
+			
 			<h2>A little bit about us</h2>
 
 			<img id="mainImage" src="/images/family.jpg" alt="Family Photo">

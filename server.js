@@ -13,63 +13,70 @@ app.set('views', path.join(__dirname, '/public/views'))
 
 // index page 
 app.get('/', function (req, res) {
-    res.render('pages/index');
+    let pageMenu = getPageMenu("index");
+    res.render('pages/index', { menu: pageMenu });
 });
 
-// about page 
-/*app.get('/ahil.html', function(req, res) {
-    let menu = getMenu();
-    var menuAhil = tasks.map(function (menuItem, index, array) {
-        if (menuItem.id == 'ahil') 
-            menuItem.isSelected = true;
-        return  menuItem;
-    });
-    res.render('pages/ahil', { menu: menuAhil});
-});*/
+
 app.get('/index.html', function (req, res) {
-    res.render('pages/index');
+    let pageMenu = getPageMenu("index");
+    res.render('pages/index', { menu: pageMenu });
+
 });
 app.get('/asif.html', function (req, res) {
-    res.render('pages/asif');
+    let pageMenu = getPageMenu("asif");
+    res.render('pages/asif', { menu: pageMenu });
 });
 app.get('/contactUs.html', function (req, res) {
-    res.render('pages/contactUs');
+    let pageMenu = getPageMenu("contactus");
+    res.render('pages/contactUs', { menu: pageMenu });
 });
 app.get('/grandparents.html', function (req, res) {
-    res.render('pages/grandparents');
+    let pageMenu = getPageMenu("grandparents");
+    res.render('pages/grandparents', { menu: pageMenu });
 });
 app.get('/laila.html', function (req, res) {
-    res.render('pages/laila');
+    let pageMenu = getPageMenu("laila");
+    res.render('pages/laila', { menu: pageMenu });
 });
 app.get('/ruhee.html', function (req, res) {
-    res.render('pages/ruhee');
+    let pageMenu = getPageMenu("ruhee");
+    res.render('pages/ruhee', { menu: pageMenu });
 });
 app.get('/vacation.html', function (req, res) {
-    res.render('pages/vacation');
+    let pageMenu = getPageMenu("vacation");
+    res.render('pages/vacation', { menu: pageMenu });
 });
 
 
 app.get('/ahil.html', function (req, res) {
-    res.render('pages/ahil');
+    let pageMenu = getPageMenu("ahil");
+    res.render('pages/ahil', { menu: pageMenu });
 });
 app.listen(8080);
 console.log('8080 is the magic port');
 
-/*const getMenu = () => {
-  let  menu = [
-      {id: "ahil", href:"pages/ahil", display: "Ahil", isSelected:false},
-      {id: "asif", href:"pages/asif", display: "Asif", isSelected:false},
-      {id: "contactUs", href:"pages/contactUs", display: "Contact Us", isSelected:false},
-    {id: "grandparents", href:"pages/grandparents", display: "Grandparents", isSelected:false},
-    {id: "index", href:"pages/index", display: "Home", isSelected:false},
-    {id: "laila", href:"pages/laila", display: "Laila", isSelected:false},
-    {id: "ruhee", href:"pages/ruhee", display: "Ruhee", isSelected:false},
-    {id: "vacation", href:"pages/vacation", display: "Vacation", isSelected:false},
+const getMenu = () => {
+    let menu = [
+        { id: "index", href: "index.html", display: "Home", isSelected: false },
+        { id: "asif", href: "asif.html", display: "Asif", isSelected: false },
+        { id: "laila", href: "laila.html", display: "Laila", isSelected: false },
+        { id: "ahil", href: "ahil.html", display: "Ahil", isSelected: false },
+        { id: "ruhee", href: "ruhee.html", display: "Ruhee", isSelected: false },
+        { id: "grandparents", href: "grandparents.html", display: "Grandparents", isSelected: false },
+        { id: "vacation", href: "vacation.html", display: "Vacation", isSelected: false },
+        { id: "contactus", href: "contactUs.html", display: "Contact Us", isSelected: false }
+    ]
+    return menu;
+}
 
-    
+const getPageMenu = (page) => {
+    let menu = getMenu();
+    var pageMenu = menu.map(function (menuItem, index, array) {
+        if (menuItem.id == page)
+            menuItem.isSelected = true;
+        return menuItem;
+    });
 
-
-  ]
-
-
-}*/
+    return pageMenu;
+}
